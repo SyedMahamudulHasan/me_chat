@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "610387722625",
+    "project_id": "amadia-me-chat",
+    "storage_bucket": "amadia-me-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:610387722625:android:7efc15ceb20c9a8f732880",
+        "android_client_info": {
+          "package_name": "com.example.me_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "610387722625-1abch95ngdu3ahjdg48oib59ccnt1bkf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_UsGQq2cltYiAJakSWMdTwNogstC9tBg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "610387722625-1abch95ngdu3ahjdg48oib59ccnt1bkf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
