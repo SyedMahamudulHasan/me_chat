@@ -1,8 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
+import 'package:me_chat/model/message.dart';
+import 'package:me_chat/model/user_model.dart';
 import 'package:uuid/uuid.dart';
+
+
 
 class ChatRepository{
   final FirebaseFirestore firestore;
