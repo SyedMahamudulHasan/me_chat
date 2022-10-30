@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:me_chat/model/chat_contact.dart';
 import 'package:me_chat/model/message.dart';
 import 'package:me_chat/model/user_model.dart';
 import 'package:uuid/uuid.dart';
@@ -123,17 +124,11 @@ class ChatRepository{
     required String recieverUserId,
     required UserModel senderUser,
     required MessageReply? messageReply,
-    required bool isGroupChat,
+   
   }) async {
     try {
       var timeSent = DateTime.now();
       UserModel? recieverUserData;
-
-      if (!isGroupChat) {
-        var userDataMap =
-            await firestore.collection('users').doc(recieverUserId).get();
-        recieverUserData = UserModel.fromMap(userDataMap.data()!);
-      }
 
       var messageId = const Uuid().v1();
 
