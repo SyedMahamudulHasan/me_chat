@@ -77,7 +77,7 @@ class ChatRepository {
     required String messageId,
     required String username,
     required MessageEnum messageType,
-    required MessageReply? messageReply,
+    //required MessageReply? messageReply,
     required String senderUsername,
     required String? recieverUserName,
   }) async {
@@ -89,14 +89,14 @@ class ChatRepository {
       timeSent: timeSent,
       messageId: messageId,
       isSeen: false,
-      repliedMessage: messageReply == null ? '' : messageReply.message,
-      repliedTo: messageReply == null
-          ? ''
-          : messageReply.isMe
-              ? senderUsername
-              : recieverUserName ?? '',
-      repliedMessageType:
-          messageReply == null ? MessageEnum.text : messageReply.messageEnum,
+      // repliedMessage: messageReply == null ? '' : messageReply.message,
+      // repliedTo: messageReply == null
+      //     ? ''
+      //     : messageReply.isMe
+      //         ? senderUsername
+      //         : recieverUserName ?? '',
+      // repliedMessageType:
+      //     messageReply == null ? MessageEnum.text : messageReply.messageEnum,
     );
 
     // users -> sender id -> reciever id -> messages -> message id -> store message
@@ -169,7 +169,7 @@ class ChatRepository {
     required String text,
     required String recieverUserId,
     required UserModel senderUser,
-    required MessageReply? messageReply,
+    //required MessageReply? messageReply,
   }) async {
     try {
       var timeSent = DateTime.now();
@@ -192,7 +192,7 @@ class ChatRepository {
         messageType: MessageEnum.text,
         messageId: messageId,
         username: senderUser.name,
-        messageReply: messageReply,
+        //messageReply: messageReply,
         recieverUserName: recieverUserData?.name,
         senderUsername: senderUser.name,
       );
